@@ -4,7 +4,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import cv2
 import numpy as np
 class objectRecorder:
-    def __init__(self):
+    def __init__(self, video_file=None):
         self.history = {}
         '''
         {
@@ -34,6 +34,12 @@ class objectRecorder:
             ...
         }
         '''
+        if video_file:
+            self.have_video = True
+            self.cap = cv2.VideoCapture(video_file)
+        else:
+            self.have_video = False
+            self.cap = None
     
     def compareImages(self, img1: np.array, img2: np.array):
         # Compute the Structural Similarity Index (SSI) between the two images
