@@ -1,0 +1,496 @@
+{
+    "person_0": [],
+    "person_1": [],
+    "person_2": [],
+    "person_3": [],
+    "dog_4": [],
+    "person_5": [],
+    "dog_6": [],
+    "person_7": [],
+    "skateboard_8": [],
+    "person_9": [],
+    "person_10": [],
+    "dog_11": [],
+    "person_12": [],
+    "cow_13": [],
+    "person_14": [],
+    "dog_15": [],
+    "person_16": [],
+    "person_17": [],
+    "person_18": [],
+    "person_19": [],
+    "person_20": [],
+    "person_21": [],
+    "person_22": [],
+    "person_23": [
+        {
+            "start": [
+                -6,
+                -1
+            ],
+            "end": [
+                3,
+                -9
+            ],
+            "cosine_similarity": -0.1559625734730109
+        }
+    ],
+    "person_24": [],
+    "person_25": [
+        {
+            "start": [
+                6,
+                1
+            ],
+            "end": [
+                -8,
+                1
+            ],
+            "cosine_similarity": -0.9583856835862682
+        },
+        {
+            "start": [
+                -8,
+                1
+            ],
+            "end": [
+                2,
+                1
+            ],
+            "cosine_similarity": -0.8320502943378437
+        }
+    ],
+    "person_26": [],
+    "person_27": [
+        {
+            "start": [
+                0,
+                -1
+            ],
+            "end": [
+                2,
+                0
+            ],
+            "cosine_similarity": 0.0
+        }
+    ],
+    "car_28": [],
+    "person_29": [],
+    "person_30": [],
+    "car_31": [],
+    "person_32": [],
+    "person_33": [],
+    "truck_34": [],
+    "person_35": [],
+    "person_36": [],
+    "truck_37": [],
+    "person_38": [
+        {
+            "start": [
+                -34,
+                0
+            ],
+            "end": [
+                -111,
+                0
+            ],
+            "cosine_similarity": 1.0
+        }
+    ],
+    "car_39": [],
+    "car_40": [],
+    "car_41": [],
+    "person_42": [
+        {
+            "start": [
+                -39,
+                1
+            ],
+            "end": [
+                -121,
+                2
+            ],
+            "cosine_similarity": 0.9999585225647668
+        },
+        {
+            "start": [
+                -121,
+                2
+            ],
+            "end": [
+                -288,
+                2
+            ],
+            "cosine_similarity": 0.9999540825656327
+        },
+        {
+            "start": [
+                -288,
+                2
+            ],
+            "end": [
+                -373,
+                2
+            ],
+            "cosine_similarity": 0.9999987479200808
+        }
+    ],
+    "car_43": [],
+    "car_44": [
+        {
+            "start": [
+                1,
+                0
+            ],
+            "end": [
+                0,
+                1
+            ],
+            "cosine_similarity": 0.0
+        }
+    ],
+    "person_45": [],
+    "car_46": [],
+    "person_47": [],
+    "person_48": [],
+    "person_49": [],
+    "person_50": [],
+    "person_51": [],
+    "person_52": [
+        {
+            "start": [
+                -8,
+                4
+            ],
+            "end": [
+                -5,
+                6
+            ],
+            "cosine_similarity": 0.9161573349021892
+        },
+        {
+            "start": [
+                -5,
+                6
+            ],
+            "end": [
+                -11,
+                4
+            ],
+            "cosine_similarity": 0.8641753818425661
+        }
+    ],
+    "person_53": [
+        {
+            "start": [
+                -6,
+                0
+            ],
+            "end": [
+                -9,
+                -1
+            ],
+            "cosine_similarity": 0.9938837346736188
+        },
+        {
+            "start": [
+                -9,
+                -1
+            ],
+            "end": [
+                -11,
+                -1
+            ],
+            "cosine_similarity": 0.9998000599800069
+        }
+    ],
+    "person_54": [
+        {
+            "start": [
+                -6,
+                -1
+            ],
+            "end": [
+                -6,
+                -1
+            ],
+            "cosine_similarity": 1.0000000000000002
+        },
+        {
+            "start": [
+                -6,
+                -1
+            ],
+            "end": [
+                -7,
+                -7
+            ],
+            "cosine_similarity": 0.813733471206735
+        },
+        {
+            "start": [
+                -7,
+                -7
+            ],
+            "end": [
+                -8,
+                -5
+            ],
+            "cosine_similarity": 0.97439119569462
+        },
+        {
+            "start": [
+                -8,
+                -5
+            ],
+            "end": [
+                -8,
+                -4
+            ],
+            "cosine_similarity": 0.9954954725939523
+        },
+        {
+            "start": [
+                -8,
+                -4
+            ],
+            "end": [
+                -9,
+                -4
+            ],
+            "cosine_similarity": 0.9989685402102997
+        },
+        {
+            "start": [
+                -9,
+                -4
+            ],
+            "end": [
+                -8,
+                -8
+            ],
+            "cosine_similarity": 0.9333456062030595
+        },
+        {
+            "start": [
+                -8,
+                -8
+            ],
+            "end": [
+                -10,
+                -5
+            ],
+            "cosine_similarity": 0.9486832980505138
+        },
+        {
+            "start": [
+                -10,
+                -5
+            ],
+            "end": [
+                -8,
+                -7
+            ],
+            "cosine_similarity": 0.9676172723968438
+        },
+        {
+            "start": [
+                -8,
+                -7
+            ],
+            "end": [
+                -9,
+                -5
+            ],
+            "cosine_similarity": 0.9776685014774172
+        }
+    ],
+    "person_55": [],
+    "person_56": [
+        {
+            "start": [
+                2,
+                0
+            ],
+            "end": [
+                3,
+                -1
+            ],
+            "cosine_similarity": 0.9486832980505138
+        },
+        {
+            "start": [
+                3,
+                -1
+            ],
+            "end": [
+                4,
+                -1
+            ],
+            "cosine_similarity": 0.9970544855015815
+        },
+        {
+            "start": [
+                4,
+                -1
+            ],
+            "end": [
+                10,
+                -2
+            ],
+            "cosine_similarity": 0.9988681377244377
+        },
+        {
+            "start": [
+                10,
+                -2
+            ],
+            "end": [
+                10,
+                -1
+            ],
+            "cosine_similarity": 0.9952285251199801
+        },
+        {
+            "start": [
+                10,
+                -1
+            ],
+            "end": [
+                13,
+                -2
+            ],
+            "cosine_similarity": 0.9985968522504753
+        },
+        {
+            "start": [
+                13,
+                -2
+            ],
+            "end": [
+                15,
+                -3
+            ],
+            "cosine_similarity": 0.9989990544119016
+        },
+        {
+            "start": [
+                15,
+                -3
+            ],
+            "end": [
+                17,
+                -3
+            ],
+            "cosine_similarity": 0.9997418355449427
+        },
+        {
+            "start": [
+                17,
+                -3
+            ],
+            "end": [
+                20,
+                -2
+            ],
+            "cosine_similarity": 0.9971885523664499
+        },
+        {
+            "start": [
+                20,
+                -2
+            ],
+            "end": [
+                18,
+                -2
+            ],
+            "cosine_similarity": 0.9999396262866598
+        },
+        {
+            "start": [
+                18,
+                -2
+            ],
+            "end": [
+                22,
+                -8
+            ],
+            "cosine_similarity": 0.971784605540551
+        },
+        {
+            "start": [
+                22,
+                -8
+            ],
+            "end": [
+                26,
+                -3
+            ],
+            "cosine_similarity": 0.9727711785327552
+        }
+    ],
+    "person_57": [
+        {
+            "start": [
+                5,
+                0
+            ],
+            "end": [
+                7,
+                0
+            ],
+            "cosine_similarity": 1.0
+        },
+        {
+            "start": [
+                7,
+                0
+            ],
+            "end": [
+                11,
+                -1
+            ],
+            "cosine_similarity": 0.9958932064677039
+        }
+    ],
+    "person_58": [
+        {
+            "start": [
+                5,
+                2
+            ],
+            "end": [
+                12,
+                3
+            ],
+            "cosine_similarity": 0.9908301680442991
+        }
+    ],
+    "car_59": [],
+    "car_60": [],
+    "car_61": [],
+    "person_62": [],
+    "car_63": [],
+    "car_64": [],
+    "truck_65": [],
+    "car_66": [],
+    "car_67": [],
+    "car_68": [
+        {
+            "start": [
+                -9,
+                2
+            ],
+            "end": [
+                -22,
+                1
+            ],
+            "cosine_similarity": 0.9850304671557043
+        }
+    ],
+    "car_69": [],
+    "truck_70": [],
+    "car_71": [],
+    "car_72": [],
+    "clock_73": []
+}

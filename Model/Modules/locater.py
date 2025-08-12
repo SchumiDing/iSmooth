@@ -4,6 +4,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+from ultralytics import YOLO
 
 class objectRecorder:
     def __init__(self, video_file=None, Model=None):
@@ -44,7 +45,7 @@ class objectRecorder:
             self.videoFile = None
         if Model:
             self.have_model = True
-            self.Model = Model
+            self.Model = YOLO(Model)
         else:
             self.have_model = False
             self.Model = None
@@ -76,10 +77,10 @@ class objectRecorder:
         
         return similarity
 
-    def ifObjExists(self, obj_category):
+    def ifObjExists(self, img: np.array ):
         comp = {}
         for key in self.history.keys():
-            comp[key] = self.compareImages(self.history[key]["template"], obj_category)
+            comp[key] = self.compareImages(self.history[key]["template"], img)
         comp = sorted(comp.items(), key=lambda item: item[1], reverse=True)
 
         if comp and comp[0][1] > self.threshold:  # Threshold for similarity
@@ -121,23 +122,26 @@ class objectRecorder:
             results = self.Model(frame)
             for result in results:
                 for box in result.boxes:
-                    if box.confidence > self.yolothreshold:
-                        x1, y1, x2, y2 = map(int, box.xyxy)
+                    if box.conf > self.yolothreshold:
+                        x1 = int(box.xyxy[0][0])
+                        y1 = int(box.xyxy[0][1])
+                        x2 = int(box.xyxy[0][2])
+                        y2 = int(box.xyxy[0][3])
                         class_id = int(box.cls)
                         img = frame[y1:y2, x1:x2]
                         obj_category = self.Model.names[class_id]
-                        exist, key = self.ifObjExists(obj_category)
+                        exist, key = self.ifObjExists(img)
                         if exist:
                             self.history[key]["locations"].append({
                                 "x1": x1, "y1": y1, "x2": x2, "y2": y2,
-                                "confidence": box.confidence, "class_id": class_id, "img": img
+                                "confidence": box.conf, "class_id": class_id, "img": img
                             })
                         else:
                             self.history[f"{obj_category}_{self.index}"] = {
                                 "template": img,
                                 "locations": [{
                                     "x1": x1, "y1": y1, "x2": x2, "y2": y2,
-                                    "confidence": box.confidence, "class_id": class_id, "img": img
+                                    "confidence": box.conf, "class_id": class_id, "img": img
                                 }]
                             }
                             self.index += 1
