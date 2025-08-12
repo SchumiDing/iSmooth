@@ -41,12 +41,6 @@ class objectRecorder:
             self.have_video = False
             self.cap = None
         self.threshold = 0.8
-    
-    def compareImages(self, img1: np.array, img2: np.array):
-        # Compute the Structural Similarity Index (SSI) between the two images
-        ssim = cv2.SSIM(img1, img2)
-        # ssim is a value between -1 and 1, where 1 means the images are identical
-        return ssim
 
     def setThreshold(self, threshold: float):
         self.threshold = threshold
@@ -57,6 +51,12 @@ class objectRecorder:
     
     def getMovement(self):
         return self.movement
+    
+    def compareImages(self, img1: np.array, img2: np.array):
+        # Compute the Structural Similarity Index (SSI) between the two images
+        ssim = cv2.SSIM(img1, img2)
+        # ssim is a value between -1 and 1, where 1 means the images are identical
+        return ssim
     
     def ifObjExists(self, obj_category):
         comp = {}
