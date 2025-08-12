@@ -78,4 +78,3 @@ class objectRecorder:
                 })
         return self.movement
         # This method calculates the movement of each object based on its locations
-    
