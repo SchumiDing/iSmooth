@@ -3,6 +3,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
+
 class objectRecorder:
     def __init__(self, video_file=None, Model=None):
         self.history = {}
@@ -48,6 +50,7 @@ class objectRecorder:
             self.Model = None
         self.threshold = 0.8
         self.yolothreshold = 0.5
+        self.visData = {}
         
     def setThreshold(self, threshold: float):
         self.threshold = threshold
@@ -137,3 +140,39 @@ class objectRecorder:
         cap.release()
         self.calMovement()
         return self.movement
+    
+    def cosinSim(self, vec1: np.array, vec2: np.array):
+        dot_product = np.dot(vec1.flatten(), vec2.flatten())
+        norm1 = np.linalg.norm(vec1)
+        norm2 = np.linalg.norm(vec2)
+        if norm1 == 0 or norm2 == 0:
+            return 0
+        return dot_product / (norm1 * norm2)
+    
+    def prepareVisData(self):
+        if self.movement == {}:
+            raise ValueError("No movement data to draw.")
+        
+        self.visData = {}
+        for key, data in self.movement.items():
+
+            move = data["move"]
+            dat = []
+            for i, m in enumerate(move):
+                if i == 0:
+                    continue
+                start = np.array([move[i-1]["x_Move"], move[i-1]["y_Move"]])
+                end = np.array([m["x_Move"], m["y_Move"]])
+                
+                cosSim = self.cosinSim(start, end)
+                dat.append({
+                    "start": start.tolist(),
+                    "end": end.tolist(),
+                    "cosine_similarity": float(cosSim),
+                })
+            
+            self.visData[key] = dat
+        
+        return self.visData
+
+    
