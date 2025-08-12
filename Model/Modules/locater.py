@@ -47,10 +47,15 @@ class objectRecorder:
             self.have_model = False
             self.Model = None
         self.threshold = 0.8
-
+        self.yolothreshold = 0.5
+        
     def setThreshold(self, threshold: float):
         self.threshold = threshold
         return self.threshold
+    
+    def setYoloThreshold(self, yolothreshold: float):
+        self.yolothreshold = yolothreshold
+        return self.yolothreshold
 
     def getHistory(self):
         return self.history
@@ -109,7 +114,7 @@ class objectRecorder:
             results = self.Model(frame)
             for result in results:
                 for box in result.boxes:
-                    if box.confidence > 0.5:
+                    if box.confidence > self.yolothreshold:
                         x1, y1, x2, y2 = map(int, box.xyxy)
                         class_id = int(box.cls)
                         img = frame[y1:y2, x1:x2]
