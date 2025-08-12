@@ -40,6 +40,7 @@ class objectRecorder:
         else:
             self.have_video = False
             self.cap = None
+        self.threshold = 0.8
     
     def compareImages(self, img1: np.array, img2: np.array):
         # Compute the Structural Similarity Index (SSI) between the two images
@@ -47,13 +48,23 @@ class objectRecorder:
         # ssim is a value between -1 and 1, where 1 means the images are identical
         return ssim
 
+    def setThreshold(self, threshold: float):
+        self.threshold = threshold
+        return self.threshold
+
+    def getHistory(self):
+        return self.history
+    
+    def getMovement(self):
+        return self.movement
+    
     def ifObjExists(self, obj_category):
         comp = {}
         for key in self.history.keys():
             comp[key] = self.compareImages(self.history[key]["template"], obj_category)
         comp = sorted(comp.items(), key=lambda item: item[1], reverse=True)
-        
-        if comp and comp[0][1] > 0.8:  # Threshold for similarity
+
+        if comp and comp[0][1] > self.threshold:  # Threshold for similarity
             return True, comp[0][0]  # Return the key of the most similar object
         return False, None
 
