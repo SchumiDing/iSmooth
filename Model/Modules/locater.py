@@ -67,11 +67,15 @@ class objectRecorder:
         return self.movement
     
     def compareImages(self, img1: np.array, img2: np.array):
-        # Compute the Structural Similarity Index (SSI) between the two images
-        ssim = cv2.SSIM(img1, img2)
-        # ssim is a value between -1 and 1, where 1 means the images are identical
-        return ssim
-    
+        
+        if img1.shape != img2.shape:
+            img2 = cv2.resize(img2, (img1.shape[1], img1.shape[0]))
+        
+        result = cv2.matchTemplate(img1, img2, cv2.TM_CCOEFF_NORMED)
+        similarity = np.max(result)
+        
+        return similarity
+
     def ifObjExists(self, obj_category):
         comp = {}
         for key in self.history.keys():
