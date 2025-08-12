@@ -29,10 +29,15 @@
                 -1
             ],
             "end": [
-                3,
-                -9
+                9,
+                -8
             ],
-            "cosine_similarity": -0.1559625734730109
+            "cosine_similarity": -0.6280192682591459,
+            "length": 16.55294535724685,
+            "timestamp": [
+                17,
+                18
+            ]
         }
     ],
     "person_24": [],
@@ -43,21 +48,31 @@
                 1
             ],
             "end": [
-                -8,
-                1
+                -14,
+                0
             ],
-            "cosine_similarity": -0.9583856835862682
+            "cosine_similarity": -0.9863939238321437,
+            "length": 20.024984394500787,
+            "timestamp": [
+                20,
+                21
+            ]
         },
         {
             "start": [
-                -8,
-                1
+                -14,
+                0
             ],
             "end": [
-                2,
-                1
+                10,
+                0
             ],
-            "cosine_similarity": -0.8320502943378437
+            "cosine_similarity": -1.0,
+            "length": 24.0,
+            "timestamp": [
+                21,
+                22
+            ]
         }
     ],
     "person_26": [],
@@ -69,9 +84,14 @@
             ],
             "end": [
                 2,
-                0
+                1
             ],
-            "cosine_similarity": 0.0
+            "cosine_similarity": -0.4472135954999579,
+            "length": 2.8284271247461903,
+            "timestamp": [
+                25,
+                26
+            ]
         }
     ],
     "car_28": [],
@@ -91,10 +111,15 @@
                 0
             ],
             "end": [
-                -111,
+                -77,
                 0
             ],
-            "cosine_similarity": 1.0
+            "cosine_similarity": 1.0,
+            "length": 43.0,
+            "timestamp": [
+                39,
+                41
+            ]
         }
     ],
     "car_39": [],
@@ -107,32 +132,47 @@
                 1
             ],
             "end": [
-                -121,
-                2
+                -82,
+                1
             ],
-            "cosine_similarity": 0.9999585225647668
+            "cosine_similarity": 0.9999096725834493,
+            "length": 43.0,
+            "timestamp": [
+                43,
+                45
+            ]
         },
         {
             "start": [
-                -121,
-                2
+                -82,
+                1
             ],
             "end": [
-                -288,
-                2
+                -167,
+                0
             ],
-            "cosine_similarity": 0.9999540825656327
+            "cosine_similarity": 0.9999256477934956,
+            "length": 85.00588214941364,
+            "timestamp": [
+                45,
+                49
+            ]
         },
         {
             "start": [
-                -288,
-                2
+                -167,
+                0
             ],
             "end": [
-                -373,
-                2
+                -85,
+                0
             ],
-            "cosine_similarity": 0.9999987479200808
+            "cosine_similarity": 1.0,
+            "length": 82.0,
+            "timestamp": [
+                49,
+                51
+            ]
         }
     ],
     "car_43": [],
@@ -143,10 +183,15 @@
                 0
             ],
             "end": [
-                0,
+                -1,
                 1
             ],
-            "cosine_similarity": 0.0
+            "cosine_similarity": -0.7071067811865475,
+            "length": 2.23606797749979,
+            "timestamp": [
+                48,
+                49
+            ]
         }
     ],
     "person_45": [],
@@ -163,21 +208,31 @@
                 4
             ],
             "end": [
-                -5,
-                6
+                3,
+                2
             ],
-            "cosine_similarity": 0.9161573349021892
+            "cosine_similarity": -0.49613893835683387,
+            "length": 11.180339887498949,
+            "timestamp": [
+                67,
+                68
+            ]
         },
         {
             "start": [
-                -5,
-                6
+                3,
+                2
             ],
             "end": [
-                -11,
-                4
+                -6,
+                -2
             ],
-            "cosine_similarity": 0.8641753818425661
+            "cosine_similarity": -0.9647638212377322,
+            "length": 9.848857801796104,
+            "timestamp": [
+                68,
+                69
+            ]
         }
     ],
     "person_53": [
@@ -187,21 +242,31 @@
                 0
             ],
             "end": [
-                -9,
+                -3,
                 -1
             ],
-            "cosine_similarity": 0.9938837346736188
+            "cosine_similarity": 0.9486832980505138,
+            "length": 3.1622776601683795,
+            "timestamp": [
+                71,
+                72
+            ]
         },
         {
             "start": [
-                -9,
+                -3,
                 -1
             ],
             "end": [
-                -11,
-                -1
+                -2,
+                0
             ],
-            "cosine_similarity": 0.9998000599800069
+            "cosine_similarity": 0.9486832980505138,
+            "length": 1.4142135623730951,
+            "timestamp": [
+                72,
+                73
+            ]
         }
     ],
     "person_54": [
@@ -211,98 +276,143 @@
                 -1
             ],
             "end": [
-                -6,
-                -1
+                0,
+                0
             ],
-            "cosine_similarity": 1.0000000000000002
+            "cosine_similarity": 0.0,
+            "length": 6.082762530298219,
+            "timestamp": [
+                76,
+                77
+            ]
         },
         {
             "start": [
-                -6,
-                -1
+                0,
+                0
             ],
             "end": [
-                -7,
-                -7
+                -1,
+                -6
             ],
-            "cosine_similarity": 0.813733471206735
+            "cosine_similarity": 0.0,
+            "length": 6.082762530298219,
+            "timestamp": [
+                77,
+                78
+            ]
         },
         {
             "start": [
-                -7,
-                -7
+                -1,
+                -6
             ],
             "end": [
-                -8,
-                -5
+                -1,
+                2
             ],
-            "cosine_similarity": 0.97439119569462
+            "cosine_similarity": -0.8087360843031884,
+            "length": 8.0,
+            "timestamp": [
+                78,
+                79
+            ]
         },
         {
             "start": [
-                -8,
-                -5
+                -1,
+                2
             ],
             "end": [
-                -8,
+                0,
+                1
+            ],
+            "cosine_similarity": 0.8944271909999159,
+            "length": 1.4142135623730951,
+            "timestamp": [
+                79,
+                80
+            ]
+        },
+        {
+            "start": [
+                0,
+                1
+            ],
+            "end": [
+                -1,
+                0
+            ],
+            "cosine_similarity": 0.0,
+            "length": 1.4142135623730951,
+            "timestamp": [
+                80,
+                81
+            ]
+        },
+        {
+            "start": [
+                -1,
+                0
+            ],
+            "end": [
+                1,
                 -4
             ],
-            "cosine_similarity": 0.9954954725939523
+            "cosine_similarity": -0.24253562503633297,
+            "length": 4.47213595499958,
+            "timestamp": [
+                81,
+                82
+            ]
         },
         {
             "start": [
-                -8,
+                1,
                 -4
             ],
             "end": [
-                -9,
-                -4
+                -2,
+                3
             ],
-            "cosine_similarity": 0.9989685402102997
+            "cosine_similarity": -0.9417419115948376,
+            "length": 7.615773105863909,
+            "timestamp": [
+                82,
+                83
+            ]
         },
         {
             "start": [
-                -9,
-                -4
+                -2,
+                3
             ],
             "end": [
-                -8,
-                -8
+                2,
+                -2
             ],
-            "cosine_similarity": 0.9333456062030595
+            "cosine_similarity": -0.98058067569092,
+            "length": 6.4031242374328485,
+            "timestamp": [
+                83,
+                84
+            ]
         },
         {
             "start": [
-                -8,
-                -8
+                2,
+                -2
             ],
             "end": [
-                -10,
-                -5
+                -1,
+                2
             ],
-            "cosine_similarity": 0.9486832980505138
-        },
-        {
-            "start": [
-                -10,
-                -5
-            ],
-            "end": [
-                -8,
-                -7
-            ],
-            "cosine_similarity": 0.9676172723968438
-        },
-        {
-            "start": [
-                -8,
-                -7
-            ],
-            "end": [
-                -9,
-                -5
-            ],
-            "cosine_similarity": 0.9776685014774172
+            "cosine_similarity": -0.9486832980505138,
+            "length": 5.0,
+            "timestamp": [
+                84,
+                85
+            ]
         }
     ],
     "person_55": [],
@@ -313,10 +423,79 @@
                 0
             ],
             "end": [
+                1,
+                -1
+            ],
+            "cosine_similarity": 0.7071067811865475,
+            "length": 1.4142135623730951,
+            "timestamp": [
+                87,
+                88
+            ]
+        },
+        {
+            "start": [
+                1,
+                -1
+            ],
+            "end": [
+                1,
+                0
+            ],
+            "cosine_similarity": 0.7071067811865475,
+            "length": 1.0,
+            "timestamp": [
+                88,
+                89
+            ]
+        },
+        {
+            "start": [
+                1,
+                0
+            ],
+            "end": [
+                6,
+                -1
+            ],
+            "cosine_similarity": 0.9863939238321437,
+            "length": 5.0990195135927845,
+            "timestamp": [
+                89,
+                90
+            ]
+        },
+        {
+            "start": [
+                6,
+                -1
+            ],
+            "end": [
+                0,
+                1
+            ],
+            "cosine_similarity": -0.1643989873053573,
+            "length": 6.324555320336759,
+            "timestamp": [
+                90,
+                91
+            ]
+        },
+        {
+            "start": [
+                0,
+                1
+            ],
+            "end": [
                 3,
                 -1
             ],
-            "cosine_similarity": 0.9486832980505138
+            "cosine_similarity": -0.31622776601683794,
+            "length": 3.605551275463989,
+            "timestamp": [
+                91,
+                92
+            ]
         },
         {
             "start": [
@@ -324,109 +503,95 @@
                 -1
             ],
             "end": [
+                2,
+                -1
+            ],
+            "cosine_similarity": 0.9899494936611664,
+            "length": 1.0,
+            "timestamp": [
+                92,
+                93
+            ]
+        },
+        {
+            "start": [
+                2,
+                -1
+            ],
+            "end": [
+                2,
+                0
+            ],
+            "cosine_similarity": 0.8944271909999159,
+            "length": 1.0,
+            "timestamp": [
+                93,
+                94
+            ]
+        },
+        {
+            "start": [
+                2,
+                0
+            ],
+            "end": [
+                3,
+                1
+            ],
+            "cosine_similarity": 0.9486832980505138,
+            "length": 1.4142135623730951,
+            "timestamp": [
+                94,
+                95
+            ]
+        },
+        {
+            "start": [
+                3,
+                1
+            ],
+            "end": [
+                -2,
+                0
+            ],
+            "cosine_similarity": -0.9486832980505138,
+            "length": 5.0990195135927845,
+            "timestamp": [
+                95,
+                96
+            ]
+        },
+        {
+            "start": [
+                -2,
+                0
+            ],
+            "end": [
                 4,
-                -1
+                -6
             ],
-            "cosine_similarity": 0.9970544855015815
+            "cosine_similarity": -0.5547001962252291,
+            "length": 8.48528137423857,
+            "timestamp": [
+                96,
+                97
+            ]
         },
         {
             "start": [
                 4,
-                -1
+                -6
             ],
             "end": [
-                10,
-                -2
+                4,
+                5
             ],
-            "cosine_similarity": 0.9988681377244377
-        },
-        {
-            "start": [
-                10,
-                -2
-            ],
-            "end": [
-                10,
-                -1
-            ],
-            "cosine_similarity": 0.9952285251199801
-        },
-        {
-            "start": [
-                10,
-                -1
-            ],
-            "end": [
-                13,
-                -2
-            ],
-            "cosine_similarity": 0.9985968522504753
-        },
-        {
-            "start": [
-                13,
-                -2
-            ],
-            "end": [
-                15,
-                -3
-            ],
-            "cosine_similarity": 0.9989990544119016
-        },
-        {
-            "start": [
-                15,
-                -3
-            ],
-            "end": [
-                17,
-                -3
-            ],
-            "cosine_similarity": 0.9997418355449427
-        },
-        {
-            "start": [
-                17,
-                -3
-            ],
-            "end": [
-                20,
-                -2
-            ],
-            "cosine_similarity": 0.9971885523664499
-        },
-        {
-            "start": [
-                20,
-                -2
-            ],
-            "end": [
-                18,
-                -2
-            ],
-            "cosine_similarity": 0.9999396262866598
-        },
-        {
-            "start": [
-                18,
-                -2
-            ],
-            "end": [
-                22,
-                -8
-            ],
-            "cosine_similarity": 0.971784605540551
-        },
-        {
-            "start": [
-                22,
-                -8
-            ],
-            "end": [
-                26,
-                -3
-            ],
-            "cosine_similarity": 0.9727711785327552
+            "cosine_similarity": -0.30320365727694704,
+            "length": 11.0,
+            "timestamp": [
+                97,
+                98
+            ]
         }
     ],
     "person_57": [
@@ -436,21 +601,31 @@
                 0
             ],
             "end": [
-                7,
+                2,
                 0
             ],
-            "cosine_similarity": 1.0
+            "cosine_similarity": 1.0,
+            "length": 3.0,
+            "timestamp": [
+                100,
+                101
+            ]
         },
         {
             "start": [
-                7,
+                2,
                 0
             ],
             "end": [
-                11,
+                4,
                 -1
             ],
-            "cosine_similarity": 0.9958932064677039
+            "cosine_similarity": 0.9701425001453319,
+            "length": 2.23606797749979,
+            "timestamp": [
+                101,
+                102
+            ]
         }
     ],
     "person_58": [
@@ -460,10 +635,15 @@
                 2
             ],
             "end": [
-                12,
-                3
+                7,
+                1
             ],
-            "cosine_similarity": 0.9908301680442991
+            "cosine_similarity": 0.9716676031619469,
+            "length": 2.23606797749979,
+            "timestamp": [
+                104,
+                105
+            ]
         }
     ],
     "car_59": [],
@@ -482,10 +662,15 @@
                 2
             ],
             "end": [
-                -22,
-                1
+                -13,
+                -1
             ],
-            "cosine_similarity": 0.9850304671557043
+            "cosine_similarity": 0.9566738804288584,
+            "length": 5.0,
+            "timestamp": [
+                121,
+                122
+            ]
         }
     ],
     "car_69": [],

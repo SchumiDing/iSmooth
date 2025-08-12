@@ -97,6 +97,7 @@ class objectRecorder:
             startP = self.history[key]["locations"][0]
             startX = (startP["x1"] + startP["x2"]) // 2
             startY = (startP["y1"] + startP["y2"]) // 2
+            pretimestamp = startP["timestamp"]
             for loc in self.history[key]["locations"][1:]:
                 X = (loc["x1"] + loc["x2"]) // 2
                 Y = (loc["y1"] + loc["y2"]) // 2
@@ -104,8 +105,12 @@ class objectRecorder:
                 y_Move = Y - startY
                 self.movement[name]["move"].append({
                     "x_Move": x_Move,
-                    "y_Move": y_Move
+                    "y_Move": y_Move,
+                    "timestamp": (pretimestamp, loc["timestamp"])
                 })
+                pretimestamp = loc["timestamp"]
+                startX = X
+                startY = Y
         return self.movement
         # This method calculates the movement of each object based on its locations
         
@@ -115,6 +120,7 @@ class objectRecorder:
         self.history = {}
         self.movement = {}
         cap = cv2.VideoCapture(self.videoFile)
+        timestamp = 0
         while cap.isOpened():
             ret, frame = cap.read()
             if not ret:
@@ -134,17 +140,20 @@ class objectRecorder:
                         if exist:
                             self.history[key]["locations"].append({
                                 "x1": x1, "y1": y1, "x2": x2, "y2": y2,
-                                "confidence": box.conf, "class_id": class_id, "img": img
+                                "confidence": box.conf, "class_id": class_id, "img": img,
+                                "timestamp": timestamp
                             })
                         else:
                             self.history[f"{obj_category}_{self.index}"] = {
                                 "template": img,
                                 "locations": [{
                                     "x1": x1, "y1": y1, "x2": x2, "y2": y2,
-                                    "confidence": box.conf, "class_id": class_id, "img": img
+                                    "confidence": box.conf, "class_id": class_id, "img": img,
+                                    "timestamp": timestamp
                                 }]
                             }
                             self.index += 1
+            timestamp += 1
         cap.release()
         self.calMovement()
         return self.movement
@@ -173,10 +182,13 @@ class objectRecorder:
                 end = np.array([m["x_Move"], m["y_Move"]])
                 
                 cosSim = self.cosinSim(start, end)
+                length = np.linalg.norm(end - start)
                 dat.append({
                     "start": start.tolist(),
                     "end": end.tolist(),
                     "cosine_similarity": float(cosSim),
+                    "length": float(length),
+                    "timestamp": m["timestamp"]
                 })
             
             self.visData[key] = dat
