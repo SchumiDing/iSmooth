@@ -4,7 +4,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import cv2
 import numpy as np
 class objectRecorder:
-    def __init__(self, video_file=None):
+    def __init__(self, video_file=None, Model=None):
         self.history = {}
         '''
         {
@@ -36,10 +36,16 @@ class objectRecorder:
         '''
         if video_file:
             self.have_video = True
-            self.cap = cv2.VideoCapture(video_file)
+            self.videoFile = video_file
         else:
             self.have_video = False
-            self.cap = None
+            self.videoFile = None
+        if Model:
+            self.have_model = True
+            self.Model = Model
+        else:
+            self.have_model = False
+            self.Model = None
         self.threshold = 0.8
 
     def setThreshold(self, threshold: float):
@@ -89,3 +95,40 @@ class objectRecorder:
                 })
         return self.movement
         # This method calculates the movement of each object based on its locations
+        
+    def detect(self):
+        if not (self.have_video and self.have_model):
+            raise ValueError("Video file or model not provided.")
+        self.history = {}
+        self.movement = {}
+        cap = cv2.VideoCapture(self.videoFile)
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if not ret:
+                break
+            results = self.Model(frame)
+            for result in results:
+                for box in result.boxes:
+                    if box.confidence > 0.5:
+                        x1, y1, x2, y2 = map(int, box.xyxy)
+                        class_id = int(box.cls)
+                        img = frame[y1:y2, x1:x2]
+                        obj_category = self.Model.names[class_id]
+                        exist, key = self.ifObjExists(obj_category)
+                        if exist:
+                            self.history[key]["locations"].append({
+                                "x1": x1, "y1": y1, "x2": x2, "y2": y2,
+                                "confidence": box.confidence, "class_id": class_id, "img": img
+                            })
+                        else:
+                            self.history[f"{obj_category}_{self.index}"] = {
+                                "template": img,
+                                "locations": [{
+                                    "x1": x1, "y1": y1, "x2": x2, "y2": y2,
+                                    "confidence": box.confidence, "class_id": class_id, "img": img
+                                }]
+                            }
+                            self.index += 1
+        cap.release()
+        self.calMovement()
+        return self.movement
