@@ -1,24 +1,5 @@
 <p align="center">
-  <svg width="820" height="160" viewBox="0 0 820 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iSmooth">
-    <defs>
-      <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop stop-color="#12c2e9" offset="0%"/>
-        <stop stop-color="#c471ed" offset="50%"/>
-        <stop stop-color="#f64f59" offset="100%"/>
-      </linearGradient>
-      <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-        <feMerge>
-          <feMergeNode in="coloredBlur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
-    <rect fill="none" width="100%" height="100%"/>
-    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-          font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif"
-          font-size="64" font-weight="800" fill="url(#g)" filter="url(#glow)">iSmooth</text>
-  </svg>
+  <span style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; font-size: 64px; font-weight: 800; background: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 0 6px rgba(196, 113, 237, 0.3);">iSmooth</span>
 </p>
 <h5 align="center">Lightweight Video Object Detection and Motion Coherence / Stutter Analysis</h5>
 
@@ -82,7 +63,7 @@ pip install -r requirements.txt
 ```powershell
 # Optional: create a virtual environment
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+.\!.venv\Scripts\Activate.ps1
 
 # Upgrade pip and install dependencies
 python -m pip install -U pip
